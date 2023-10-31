@@ -1,0 +1,16 @@
+---
+
+- name: remove sdran
+  shell:
+    cmd: |
+      kubectl delete ns sdran
+  when: inventory_hostname in groups['master_nodes']
+  ignore_errors: yes
+
+- name: remove onosproject chart repo
+  kubernetes.core.helm_repository:
+    name: sdran
+    state: absent
+    repo_url: "https://sdrancharts.onosproject.org"
+  when: inventory_hostname in groups['master_nodes']
+  ignore_errors: yes

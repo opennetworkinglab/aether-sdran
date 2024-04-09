@@ -3,7 +3,7 @@
 - name: provision sdran
   hosts: all
   gather_facts: true
-    
+
   vars_files:
     - "vars/default.yml"
 

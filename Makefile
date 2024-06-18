@@ -2,6 +2,7 @@ export ROOT_DIR ?= $(PWD)
 export SDRAN_ROOT_DIR ?= $(ROOT_DIR)
 export HOSTS_INI_FILE ?= $(SDRAN_ROOT_DIR)/hosts.ini
 
+
 export EXTRA_VARS ?= "@$(SDRAN_ROOT_DIR)/vars/default.yml"
 
 

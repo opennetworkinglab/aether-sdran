@@ -3,7 +3,7 @@
 - name: add atomix chart repo
   kubernetes.core.helm_repository:
     name: atomix
-    repo_url: "https://charts.atomix.io"
+    repo_url: "https://atomix.github.io/charts.atomix.io"
   when: inventory_hostname in groups['master_nodes']
 
 - name: add onosproject chart repo

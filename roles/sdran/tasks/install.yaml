@@ -1,11 +1,5 @@
 ---
 
-- name: add sdran chart repo
-  kubernetes.core.helm_repository:
-    name: sdran
-    repo_url: "https://sdrancharts.onosproject.org"
-  when: inventory_hostname in groups['master_nodes']
-
 - name: remove /tmp/sdran-values.yaml
   file:
     path: "/tmp/sdran-values.yaml"
